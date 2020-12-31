@@ -1,7 +1,6 @@
 from kivymd.app import MDApp
 from kivymd.uix.screen import Screen
 from kivy.uix.button import Button
-from kivymd.uix.textfield import MDTextField
 from kivy.lang import Builder
 import socket
 import os
@@ -19,7 +18,6 @@ MDTextField:
 class main(MDApp):
     def build(self):
         screen = Screen()
-        #username = MDTextField(text='Enter Username',pos_hint={'center_X':0.5,'center_y':0.5})
         username = Builder.load_string(username_helper)
         screen.add_widget(username)
         return screen
